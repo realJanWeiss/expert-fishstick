@@ -9,3 +9,9 @@ services:
     ports:
       - 3000:3000
     command: "node ./dist/main.js"
+    healthcheck:
+      test: "curl http://localhost:3000/"
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 10s
