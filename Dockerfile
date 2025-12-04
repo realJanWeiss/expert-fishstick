@@ -6,6 +6,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && apt upgrade -y
 
+RUN apt install -y curl
+
 WORKDIR /usr/src/app
 
 ENV PNPM_HOME="/pnpm"
